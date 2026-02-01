@@ -153,7 +153,7 @@
   </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;"> <div class="layout">
 
 <div class="layout">
     <aside class="sidebar">
@@ -801,7 +801,7 @@
             <p>Nhà trường xin thông báo lịch nghỉ <b>Tết Nguyên Đán Bính Ngọ 2026</b> chính thức như sau:</p>
             
             <div style="background: #fff7ed; border-radius: 12px; padding: 20px; border-left: 5px solid #f59e0b; margin: 20px 0;">
-              <p style="margin: 5px 0;">📅 <b>Thời gian nghỉ:</b> Từ ngày 14/02/2026 (27 tháng Chạp) đến hết ngày 22/02/2026 (Mùng 6 Tết).</p>
+              <p style="margin: 5px 0;">📅 <b>Thời gian nghỉ:</b> Từ ngày 14/02/2026 (27 tháng Chạp) đến hết ngày 22/02/2026 (Mùng 5 Tết).</p>
               <p style="margin: 5px 0;">🏫 <b>Ngày bắt đầu học lại:</b> Thứ Hai, ngày 23/02/2026.</p>
             </div>
 
@@ -820,7 +820,7 @@
 
         <article class="card" style="padding: 25px; display: flex; gap: 20px; align-items: flex-start;">
             <div style="background: #e0f2fe; padding: 15px; border-radius: 12px; color: #0369a1; font-weight: bold; text-align: center; min-width: 70px;">
-                <div style="font-size: 20px;">1</div>
+                <div style="font-size: 20px;">01</div>
                 <div style="font-size: 12px;">THÁNG 3</div>
             </div>
             <div style="flex: 1;">
@@ -976,7 +976,7 @@
         <div class="card" style="flex: 1; display: flex; flex-direction: column; padding: 0;">
           <div style="padding: 15px 25px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
             <div style="width: 10px; height: 10px; background: #22c55e; border-radius: 50%;"></div>
-            <strong style="font-size: 16px;">Ban Giám Hiệu</strong>
+            <strong style="font-size: 16px;">Giáo viên Tin Học</strong>
           </div>
           <div style="flex: 1; padding: 25px; overflow-y: auto; background: #f8fafc; display: flex; flex-direction: column; gap: 15px;">
             <div style="align-self: flex-start; background: white; padding: 12px 18px; border-radius: 15px 15px 15px 2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); max-width: 70%; font-size: 14px;">
@@ -1071,7 +1071,32 @@ function showPage(id, el){
   if(target) { target.classList.add('active'); el.classList.add('active'); }
 }
 </script>
+<script>
+    // Hàm chuyển trang
+    function showPage(pageId, element) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+        document.querySelectorAll('.menu a').forEach(a => a.classList.remove('active'));
+        element.classList.add('active');
+    }
+
+    // --- CODE CHỐNG XEM NGUỒN ---
+    
+    // 1. Chặn phím tắt (F12, Ctrl+Shift+I, Ctrl+U, v.v.)
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) { return false; } // F12
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0))) { return false; }
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; } // Ctrl+U
+    };
+
+    // 2. Thông báo khi cố gắng copy hoặc xem nguồn (Tùy chọn)
+    /*
+    document.addEventListener('copy', (e) => {
+        alert("Nội dung đã được bảo vệ!");
+        e.preventDefault();
+    });
+    */
+</script>
 
 </body>
 </html>
-
