@@ -161,6 +161,7 @@
       
       <div class="menu">
         <h4>Trang chủ</h4>
+		<a href="#" onclick="showPage('truong-hoc', this)">Trường học</a>
         <a class="active" href="#" onclick="showPage('tong-quan', this)">Tổng quan</a>
         <a href="#" onclick="showPage('hoc-sinh', this)">Quản lý học sinh</a>
         <a href="#" onclick="showPage('thoi-khoa-bieu', this)">Thời khóa biểu</a>
@@ -272,7 +273,39 @@
         padding: 6px 15px; border-radius: 8px; font-weight: bold;
     }
 </style>
+<section id="truong-hoc" class="page" style="width: 100%;">
+    <style>
+        
+    </style>
 
+    <div style="margin-bottom: 40px; text-align: center;">
+        <h2 style="margin:0; font-size: 32px; color: #1e293b; font-weight: 800;">🏫 Trường Trung Học Phổ Thông Lê Quý Đôn-Đăk Lăk</h2>
+        <p style="color:#64748b; margin-top:10px; font-size: 16px;">Nơi cập nhật thông tin quan trọng dành riêng cho trường THPT Lê Quý Đôn</p>
+    </div>
+
+    <div class="timeline-container">
+        
+        <div style="position: relative;">
+            <div class="timeline-dot" style="background: #f59e0b; box-shadow: 0 0 10px #f59e0b;"></div>
+            <article class="card" style="padding: 0; overflow: hidden; border: none; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);">
+                <div style="background: linear-gradient(135deg, #f59e0b, #ea580c); padding: 25px 35px; color: white; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <span style="font-size: 45px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));">🏫</span>
+                        <div>
+                            <h3 style="margin: 0; color: white; font-size: 22px; letter-spacing: -0.5px;">Đường dẫn tới trang web trường</h3>
+                            <small style="opacity: 0.9; font-size: 13px;">Đăng bởi: <b>Cô </b> • Hôm qua, 10:45</small>
+                        </div>
+                    </div>
+                    <span class="status-pill" style="background: white; color: #ea580c; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">🔥 QUAN TRỌNG</span>
+                </div>
+                
+                <div style="padding: 35px; line-height: 1.8; color: #334155; font-size: 16px; background: white;">
+                 
+            </article>
+        </div>
+    </div>
+    <div style="height: 60px;"></div>
+</section>
 <section id="tong-quan" class="page active" style="width: 100%;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; width: 100%;">
         <div>
@@ -320,9 +353,9 @@
         <div class="card">
             <h3>Thông báo mới</h3>
             <div style="margin-top: 15px;">
-                <p><strong>📌 Phan Bảo Lâm</strong></p>
+                <p><strong>📌 Nghỉ Phép</strong></p>
                 <hr style="border: 0; border-top: 1px solid #eee;">
-                <p style="color: #ff7675;"><strong>⚠️ Thông Báo</strong> Bảo Lâm nhập viện vì thiếu nước.</p>
+                <p style="color: #ff7675;"><strong>⚠️ Thông Báo:</strong> Bạn Bảo Lâm vắng, lý do nhập viện.</p>
             </div>
         </div>
     </div>
@@ -395,6 +428,10 @@
             background: #e1f5fe; color: #0288d1; padding: 4px 12px;
             border-radius: 20px; font-size: 0.75rem; font-weight: bold;
         }
+		.nonbadge {
+            background: #ff3333; color: #880000; padding: 4px 12px;
+            border-radius: 20px; font-size: 0.75rem; font-weight: bold;
+        }
         .gender-nu { color: #fd79a8; } /* Hồng cho Nữ */
         .gender-nam { color: #0984e3; } /* Xanh cho Nam */
         .role-monitor { 
@@ -445,7 +482,7 @@
                 <tr><td><span class="stt-circle">12</span></td><td><strong>Phạm Thị Vân Khánh</strong></td><td>26/01/2008</td><td><span class="gender-nu">Nữ</span></td><td>Học sinh</td><td><span class="badge">Đang học</span></td><td style="text-align:right">✏️</td></tr>
                 <tr><td><span class="stt-circle">13</span></td><td><strong>Nguyễn Đăng Khoa</strong></td><td>28/10/2008</td><td><span class="gender-nam">Nam</span></td><td>Lớp Phó Lao Động</td><td><span class="badge">Đang học</span></td><td style="text-align:right">✏️</td></tr>
                 <tr><td><span class="stt-circle">14</span></td><td><strong>Nguyễn Đình Khoa</strong></td><td>29/12/2008</td><td><span class="gender-nam">Nam</span></td><td>Học sinh</td><td><span class="badge">Đang học</span></td><td style="text-align:right">✏️</td></tr>
-                <tr><td><span class="stt-circle">15</span></td><td><strong>Phan Bảo Lâm</strong></td><td>26/11/2008</td><td><span class="gender-nam">Nam</span></td><td>Học sinh</td><td><span class="badge">Vắng học</span></td><td style="text-align:right">✏️</td></tr>
+                <tr><td><span class="stt-circle">15</span></td><td><strong>Phan Bảo Lâm</strong></td><td>26/11/2008</td><td><span class="gender-nam">Nam</span></td><td>Học sinh</td><td><span class="nonbadge">Vắng học</span></td><td style="text-align:right">✏️</td></tr>
                 <tr><td><span class="stt-circle">16</span></td><td><strong>Nguyễn Hoàng My</strong></td><td>18/09/2008</td><td><span class="gender-nu">Nữ</span></td><td>Lớp Phó Học Tập</td><td><span class="badge">Đang học</span></td><td style="text-align:right">✏️</td></tr>
                 <tr><td><span class="stt-circle">17</span></td><td><strong>Lê Nguyễn Hạo Nam</strong></td><td>04/04/2008</td><td><span class="gender-nam">Nam</span></td><td>Học sinh</td><td><span class="badge">Đang học</span></td><td style="text-align:right">✏️</td></tr>
                 <tr><td><span class="stt-circle">18</span></td><td><strong>Nguyễn Hoàng Kim Ngân</strong></td><td>25/04/2008</td><td><span class="gender-nu">Nữ</span></td><td>Học sinh</td><td><span class="badge">Đang học</span></td><td style="text-align:right">✏️</td></tr>
@@ -1275,5 +1312,4 @@ function showPage(id, el){
 
 </body>
 </html>
-
 
